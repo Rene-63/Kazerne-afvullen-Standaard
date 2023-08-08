@@ -8,6 +8,46 @@
 // @grant        none
 // ==/UserScript==
 
+var runPage = false;
+
+(async function () {
+    'use strict';
+
+    setlocalstorageitems()
+    setnavitems()
+
+    function setlocalstorageitems() {
+        if (!localStorage.KAS_VNL_Shortcut) {
+            localStorage.setItem("KAS_VNL_Shortcut", 'off');
+        }
+    }
+
+    function setnavitems() {
+        var navKAS_VNL_Shortcut = '<a role="presentation" href="#" id="setKAS_VNL_Shortcut" data-KAS_VNL_Shortcut="' + localStorage.getItem('KAS_VNL_Shortcut') + '" >KAS_VNL Sneltoets (R): <strong><span id="showKAS_VNL_Shortcut">' + (localStorage.getItem('KAS_VNL_Shortcut') == 'on' ? 'Aan' : 'Uit') + '</span></strong></a>';
+        $("ul .dropdown-menu[aria-labelledby='menu_alliance'] >> a[href='/freunde']").parent().after(navKAS_VNL_Shortcut);
+    }
+
+    $("#setKAS_VNL_Shortcut").click(function () {
+        if (localStorage.getItem('KAS_VNL_Shortcut') == 'on') {
+            localStorage.setItem("KAS_VNL_Shortcut", 'off');
+        } else {
+            localStorage.setItem("KAS_VNL_Shortcut", 'on');
+        }
+        $("#showKAS_VNL_Shortcut").html((localStorage.getItem('KAS_VNL_Shortcut') == 'on' ? 'Aan' : 'Uit'));
+    });
+
+    function checkurl() {
+        var url = window.location.pathname.split("/");
+        $.each(url, function (index, value) {
+            if (value == 'missions') {
+                runPage = true;
+            }
+        });
+        return runPage;
+    }
+
+    
+
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const GewensteLevelBrandweer = 24;
 
