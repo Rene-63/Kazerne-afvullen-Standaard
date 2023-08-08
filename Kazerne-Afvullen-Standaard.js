@@ -7,8 +7,8 @@
 // @match        https://www.meldkamerspel.com/buildings/*
 // @match        https://politie.meldkamerspel.com/*
 // @grant        none
-// @updateURL    https://github.com/Rene-63/Kazerne-afvullen-Standaard/raw/main/Kazerne%20Afvullen%20Standaard.js
-// @downloadURL  https://github.com/Rene-63/Kazerne-afvullen-Standaard/raw/main/Kazerne%20Afvullen%20Standaard.js
+// @updateURL    https://github.com/Rene-63/Kazerne-afvullen-Standaard/raw/main/Kazerne-Afvullen-Standaard.js
+// @downloadURL  https://github.com/Rene-63/Kazerne-afvullen-Standaard/raw/main/Kazerne-Afvullen-Standaard.js
 
 // ==/UserScript==
 
