@@ -5,7 +5,11 @@
 // @description  Doneer aan het Vergeten Kind
 // @author       Rene-MKS & Piet2001
 // @match        https://www.meldkamerspel.com/buildings/*
+// @match        https://politie.meldkamerspel.com/*
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/Rene-63/Kazerne-afvullen-Standaard/main/Kazerne%20Afvullen%20Standaard.js
+// @downloadURL  https://raw.githubusercontent.com/Rene-63/Kazerne-afvullen-Standaard/main/Kazerne%20Afvullen%20Standaard.js
+
 // ==/UserScript==
 
 var runPage = false;
